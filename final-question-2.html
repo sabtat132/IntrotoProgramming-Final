@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162 Final Question 2</title>
+<script>
+
+function countOddNumbers(numbers) {
+  var a;  //%is a wildcard - aka divisible by 2 means even
+  if(a%2==0)
+  {
+    alert("This is an even number");
+  }
+  else{
+    alert("This is an odd number");
+  }
+}
+
+// the following alert should show 3 - 3/5 are odd
+alert(countOddNumbers([1,2,3,4,5]));
+
+// the following alert should show 1 - only 1/5 are odd
+alert(countOddNumbers([10,12,13,14,16]));
+
+
+//i will say i keep getting undefined for even - so i have a feeling it may be from using a wildcard
+</script>
+<body>
+</body>
+</html>

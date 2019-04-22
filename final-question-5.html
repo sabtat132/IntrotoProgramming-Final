@@ -1,0 +1,45 @@
+<html>
+<body>
+<head>
+
+  <script type = "text/javascript" src="finalscript.js"></script>
+  <h2>Problem #5</h2>
+<!--I created 2 ids in order to run 2 different text variables!-->
+  <p id = "college"></p>
+  <p id = "college2"></p>
+
+  <script>
+//This function is for both ids to run but uses the same attributes
+    function University(year,name,number,credit)
+    {
+    this.SchoolYear = year;
+    this.courseName = name;
+    this.courseNumber = number;
+    this.creditNum = credit;
+    }
+
+//2 variables each under the same 1 constructor
+    var student = new University("freshman", "Intro to Programming", 162, 3);
+    var student2 = new University("sophomore", "Business Career Prep", 280, 1);
+
+//print to the screen
+    document.getElementById("college").innerHTML =  "Student #1 --- That student is a  " + student.SchoolYear + " who is taking " + student.courseName + " " + student.courseNumber + " . Did you know that course is " + student.creditNum + " credits???";
+    document.getElementById("college2").innerHTML =  "Student #2 --- That student is a  " + student2.SchoolYear + " who is taking " + student2.courseName + " " + student2.courseNumber + " . Did you know that course is " + student2.creditNum + " credits???";
+    </script>
+
+<center>
+  <!--buttons for #1 text!-->
+    <button type = "button" onclick="alterText()">Change Text on Student #1</button>
+    <button type = "button" onclick="refresh()">Reload Page on Student #1</button>
+
+    <br>
+    <br>
+    <br>
+<!--buttons for #2 text!-->
+    <button type = "button" onclick="alterText2()">Change Text on Student #2</button>
+    <button type = "button" onclick="refresh2()">Reload Page on Student #2</button>
+</center>
+
+</head>
+</body>
+</html>

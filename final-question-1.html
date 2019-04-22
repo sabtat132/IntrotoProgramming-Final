@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162 Final Question 1</title>
+<script>
+
+function getRandomCharacter(input) {
+    var text = "";
+    var possible;
+    for (var j = 0; j < input.length; j++){
+      if(input[j] == ""){
+        possible = ' ';
+      } else if ((input[j] == input[j].toUpperCase()) && (input[j] != input[j].toLowerCase())) {
+        possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      }
+      else if((input[j] == input[j].toLowerCase()) && (input[j] != input[j].toUpperCase())){
+        possible = "abcdefghijklmnopqrstuvqxyz";
+      }
+      else if('0123456789'.indexOf(input[j]) !== -1){
+        possible = "0123456789";
+      }
+      else{
+        possible = "#!@~$%^&*+?)_";
+      }
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+}
+
+// the following alert should show a random string of characters which is the same length of whichever word i have in the alert
+alert(getRandomCharacter("Sabrina"));
+
+
+// the following alert should show a random string of characters which is the same length of whichever word i have in the alert
+alert(getRandomCharacter("Pittsburgh is a great city"));
+
+</script>
+<body>
+</body>
+</html>
